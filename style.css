@@ -1,0 +1,4 @@
+ul{list-style-type: none; width: 300px;}
+li { background: lightGrey; padding: 10px;}
+li:nth-child(odd) { background: lightBlue; }
+strong{color: red; font-size: 25px;}

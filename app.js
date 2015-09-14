@@ -42,11 +42,14 @@ var totalPayedOut = 0;
 
 compileValues(initialList); //runs the program
 console.log("Total amount paid out, $" + totalPayedOut); //consoles the total value.
+$('ul').append('<li>Total amount paid out, <strong>$' + totalPayedOut + '</strong></li>');
+
 
 function compileValues(initialList){
 	for(var iter = 0; iter < initialList.length; iter++){
 		console.log("Paid out $" + amountCovered(initialList[iter]) + " for " + initialList[iter].patientName);
 		totalPayedOut += amountCovered(initialList[iter]); // this calculates the total of payouts.
+		$('ul').append('<li>' + "Paid out $" + amountCovered(initialList[iter]) + " for " + initialList[iter].patientName + '</li>');
 	}
 	return totalPayedOut;
 }//end compileValues()
